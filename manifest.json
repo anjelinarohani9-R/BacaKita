@@ -1,0 +1,12 @@
+
+{
+  "name": "BacaKita - Perpustakaan Digital",
+  "short_name": "BacaKita",
+  "description": "Temukan Buku, Buka Wawasan.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fffaf7",
+  "theme_color": "#f7dfe9",
+  "icons": []
+}
