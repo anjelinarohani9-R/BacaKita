@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7dce8">
+  <title>BacaKita - Perpustakaan Digital</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff9fc;
+      color: #49333e;
+    }
+
+    header {
+      background: #f7dce8;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #a83f70;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #75445a;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .hero {
+      padding: 75px 7%;
+      text-align: center;
+      background: #fcebf2;
+    }
+
+    .hero h1 {
+      color: #a83f70;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      margin-bottom: 25px;
+      line-height: 1.7;
+    }
+
+    .search {
+      width: min(100%, 450px);
+      padding: 14px;
+      border: 1px solid #e8bfd0;
+      border-radius: 25px;
+      outline: none;
+    }
+
+    .section {
+      padding: 45px 7%;
+    }
+
+    .section h2 {
+      color: #a83f70;
+      margin-bottom: 20px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+    }
+
+    .category {
+      background: white;
+      border: 1px solid #f0d5e1;
+      border-radius: 14px;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    footer {
+      background: #f7dce8;
+      padding: 20px;
+      text-align: center;
+      color: #75445a;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">BacaKita</div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="library.html">Koleksi</a>
+      <a href="offline.html">Offline</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Temukan Buku, Buka Wawasan.</h1>
+      <p>
+        Selamat datang di BacaKita.
+        Temukan berbagai buku dan nikmati pengalaman
+        membaca dalam satu tempat.
+      </p>
+      <input
+        class="search"
+        type="search"
+        placeholder="Cari buku favoritmu..."
+      >
+    </section>
+
+    <section class="section">
+      <h2>Kategori Buku</h2>
+      <div class="categories">
+        <div class="category">📚 Pendidikan</div>
+        <div class="category">📖 Novel</div>
+        <div class="category">✍️ Sastra</div>
+        <div class="category">🧠 Psikologi</div>
+        <div class="category">💻 Teknologi</div>
+        <div class="category">🌱 Pengembangan Diri</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 BacaKita. Temukan Buku, Buka Wawasan.</p>
+  </footer>
+
+</body>
+</html>
