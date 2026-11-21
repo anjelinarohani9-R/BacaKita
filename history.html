@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat Membaca — BacaKita</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html">BacaKita<span>.</span></a>
+    <nav class="nav-links">
+      <a href="./index.html">Beranda</a>
+      <a href="./library.html">Koleksi Buku</a>
+      <a href="./favorites.html">Favorit</a>
+      <a class="active" href="./history.html">Riwayat</a>
+      <a href="./offline.html">Offline</a>
+    </nav>
+    <a class="admin-link" href="./admin/login.html">Admin</a>
+  </header>
+
+  <main class="section">
+    <span class="eyebrow">AKTIVITAS MEMBACA</span>
+    <h1 style="font-size:40px">Riwayat Membaca</h1>
+    <p style="color:#8c7884">Lanjutkan buku yang pernah kamu baca.</p>
+
+    <div style="margin:20px 0">
+      <button id="clearHistory" class="button button-light" type="button">
+        Hapus Semua Riwayat
+      </button>
+    </div>
+
+    <div class="book-grid" id="historyList">
+      <div class="loading-card">Memuat riwayat membaca...</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="./index.html">BacaKita<span>.</span></a>
+    <p>Temukan Buku, Buka Wawasan.</p>
+  </footer>
+
+  <script src="./js/history.js"></script>
+</body>
+</html>
