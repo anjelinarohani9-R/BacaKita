@@ -273,3 +273,86 @@ footer p {
         height: 150px;
     }
 }
+
+/* HALAMAN KOLEKSI DAN DETAIL BUKU */
+
+.search-panel {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 12px;
+  margin: 28px 0 35px;
+}
+
+.search-panel input,
+.search-panel select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  color: var(--ink);
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+}
+
+.search-panel input:focus,
+.search-panel select:focus {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px rgba(184,92,131,.1);
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  align-items: start;
+  gap: 45px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.detail-cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.detail-info h1 {
+  margin: 12px 0;
+  font-size: clamp(30px, 5vw, 45px);
+}
+
+.detail-author {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.detail-description {
+  margin: 25px 0;
+  color: #74616c;
+  white-space: pre-line;
+  line-height: 1.9;
+}
+
+.detail-format {
+  color: var(--pink-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 620px) {
+  .search-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .detail-cover {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
