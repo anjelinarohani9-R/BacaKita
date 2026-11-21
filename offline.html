@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7dfe9">
+  <title>Koleksi Offline — BacaKita</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html">BacaKita<span>.</span></a>
+    <nav class="nav-links">
+      <a href="./index.html">Beranda</a>
+      <a href="./library.html">Koleksi Buku</a>
+      <a href="./favorites.html">Favorit</a>
+      <a href="./history.html">Riwayat</a>
+      <a class="active" href="./offline.html">Offline</a>
+    </nav>
+    <a class="admin-link" href="./admin/login.html">Admin</a>
+  </header>
+
+  <main class="section">
+    <span class="eyebrow">BACA TANPA INTERNET</span>
+    <h1 style="font-size:40px">Koleksi Offline</h1>
+    <p style="color:#8c7884">
+      Unduh koleksi buku saat terhubung ke internet agar bisa dibaca kembali secara offline.
+    </p>
+
+    <div class="offline-panel">
+      <h2>Status Penyimpanan</h2>
+      <p id="storageStatus">Memeriksa penyimpanan perangkat...</p>
+      <div class="progress-track">
+        <div id="downloadProgress" class="progress-fill"></div>
+      </div>
+      <p id="downloadStatus" aria-live="polite">Belum ada proses unduhan.</p>
+      <button class="button button-primary" id="downloadAll" type="button">
+        Unduh Semua Buku
+      </button>
+      <button class="button button-light" id="cancelDownload" type="button" disabled>
+        Batalkan Unduhan
+      </button>
+    </div>
+
+    <div class="section-heading" style="margin-top:40px">
+      <h2>Buku Tersimpan</h2>
+      <span id="offlineCount"></span>
+    </div>
+
+    <div class="book-grid" id="offlineList">
+      <div class="loading-card">Memeriksa buku tersimpan...</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="./index.html">BacaKita<span>.</span></a>
+    <p>Temukan Buku, Buka Wawasan.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/offline.js"></script>
+</body>
+</html>
