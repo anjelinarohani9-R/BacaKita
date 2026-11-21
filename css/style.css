@@ -1,0 +1,275 @@
+
+/* ===================================
+   Bacakita - Desain Pink Klasik Modern
+   =================================== */
+
+/* 1. PENGATURAN DASAR */
+:root {
+    --pink: #e8a9bd;
+    --pink-dark: #c87594;
+    --pink-light: #fce8ef;
+    --cream: #fffaf3;
+    --cream-dark: #f5eee5;
+    --text: #493b3f;
+    --text-light: #78676c;
+    --white: #ffffff;
+    --shadow: 0 5px 20px rgba(120, 70, 90, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* 2. HEADER */
+header {
+    background: linear-gradient(
+        135deg,
+        #f9dce6,
+        #f5c6d8
+    );
+    text-align: center;
+    padding: 45px 20px;
+    border-bottom: 3px solid #edc0d0;
+}
+
+header h1 {
+    font-size: 42px;
+    color: #75485a;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 16px;
+    color: #805a68;
+    font-style: italic;
+}
+
+/* 3. NAVIGASI */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 15px 20px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--pink-dark);
+}
+
+/* 4. KONTEN UTAMA */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+section {
+    margin-bottom: 35px;
+    padding: 35px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+section h2 {
+    color: #a45d78;
+    font-size: 27px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--pink-light);
+    padding-bottom: 10px;
+}
+
+section p {
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+/* 5. HALAMAN BERANDA */
+#beranda {
+    background: linear-gradient(
+        135deg,
+        #fff5f7,
+        #fffaf3
+    );
+    padding: 50px 35px;
+    text-align: center;
+}
+
+#beranda h2 {
+    font-size: 32px;
+    border: none;
+}
+
+#beranda p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 6. AREA KOLEKSI BUKU */
+#daftar-buku {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+    );
+    gap: 22px;
+    margin-top: 25px;
+}
+
+/* Kartu buku untuk koleksi berikutnya */
+.kartu-buku {
+    background-color: var(--cream);
+    border: 1px solid #f0dce3;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kartu-buku:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 25px rgba(120, 70, 90, 0.14);
+}
+
+.kartu-buku img {
+    width: 100%;
+    max-width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 12px;
+}
+
+.kartu-buku h3 {
+    color: #805064;
+    margin-bottom: 8px;
+}
+
+.kartu-buku p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* 7. TOMBOL */
+button,
+.tombol {
+    display: inline-block;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 22px;
+    background-color: var(--pink-dark);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+.tombol:hover {
+    background-color: #a95776;
+    transform: translateY(-2px);
+}
+
+/* 8. BAGIAN TENTANG */
+#tentang {
+    background-color: var(--cream-dark);
+}
+
+/* 9. FOOTER */
+footer {
+    background-color: #75485a;
+    color: var(--white);
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 45px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* 10. TAMPILAN HP */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        gap: 18px;
+        padding: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 23px 18px;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+
+    #beranda {
+        padding: 35px 20px;
+    }
+
+    #beranda h2 {
+        font-size: 26px;
+    }
+
+    #daftar-buku {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .kartu-buku {
+        padding: 12px;
+    }
+
+    .kartu-buku img {
+        height: 150px;
+    }
+}
