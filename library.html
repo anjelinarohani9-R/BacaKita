@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7dfe9">
+  <title>Koleksi Buku — BacaKita</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html">BacaKita<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="./index.html">Beranda</a>
+      <a class="active" href="./library.html">Koleksi Buku</a>
+      <a href="./favorites.html">Favorit</a>
+      <a href="./history.html">Riwayat</a>
+      <a href="./offline.html">Offline</a>
+    </nav>
+    <a class="admin-link" href="./admin/login.html">Admin</a>
+  </header>
+
+  <main>
+    <section class="section">
+      <span class="eyebrow">PERPUSTAKAAN BacaKita</span>
+      <h1 style="font-size:40px;margin:10px 0">Jelajahi Koleksi Buku</h1>
+      <p style="color:#8c7884">Temukan bacaan yang sesuai dengan minatmu.</p>
+
+      <div class="search-panel">
+        <input id="searchInput" type="search" placeholder="Cari judul buku atau nama penulis..." aria-label="Cari buku">
+        <select id="categoryFilter" aria-label="Pilih kategori">
+          <option value="">Semua kategori</option>
+          <option>Novel</option>
+          <option>Pendidikan</option>
+          <option>Sastra</option>
+          <option>Teknologi</option>
+          <option>Psikologi</option>
+          <option>Pengembangan Diri</option>
+        </select>
+      </div>
+
+      <div class="section-heading">
+        <h2 id="resultTitle">Semua Buku</h2>
+        <span id="bookCount" style="color:#8c7884;font-size:13px"></span>
+      </div>
+
+      <div class="book-grid" id="bookList">
+        <div class="loading-card">Memuat koleksi buku...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="./index.html">BacaKita<span>.</span></a>
+    <p>Temukan Buku, Buka Wawasan.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/library.js"></script>
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      document.getElementById("navLinks").classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
